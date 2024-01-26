@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>SupplySight - Delay Detection</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="../static/img/logo.png" alt="SupplySightLogo">
+            </div>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/sales-forecasting">SALES FORECASTING</a></li>
+                <li><a href="/delay-detection">DELAY DETECTION</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container"> 
+        <section id="introduction">
+            <h1>Delay Detection</h1>
+            <p>Assess the likelihood of late delivery using advanced classification algorithms. Please select your preferred classification model below and adjust its hyperparameters if necessary:</p>
+        </section>
+        
+        <form method="post" class="form" id="classificationForm">
+            <div class="input-group">
+                <label for="classifier">Classification Algorithm</label>
+                <select name="classifier" id="classifier" onchange="adjustHyperparameters()" multiple size="7">
+                    <option value="logistic_regression">Logistic Regression</option>
+                    <option value="k_neighbors">K-Neighbors (K=3)</option>
+                    <option value="svc">SVC - Linear</option>
+                    <option value="decision_tree">Decision Tree</option>
+                    <option value="naive_bayes">Naive Bayes</option>
+                    <!-- <option value="random_forest">Random Forest</option> -->
+                    <!-- <option value="adaboost">AdaBoost</option> -->
+                    <option value="xgboost">XGBoost</option>
+                    <option value="catboost">CatBoost</option>
+                </select>
+            </div>
+            
+            <div id="svc_params" style="display: none;">
+                <p style="font-size: 16px"><strong>SVC - Linear Hyperparameters</strong></p>
+        
+                <div class="input-group-flex">
+                    <div class="input-group">
+                        <label for="kernel_param">Kernel</label>
+                        <select id="kernel_param" name="kernel_param">
+                            <!-- <option value="rbf">RBF</option> -->
+                            <option value="linear">Linear</option>
+
+                        </select>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="C_param">C Parameter</label>
+                        <select id="C_param" name="C_param">
+                            <option value="1">1</option>
+                            <option value="10">10</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+        
+                    <div class="input-group">
+                        <label for="gamma_param">Gamma Parameter</label>
+                        <select id="gamma_param" name="gamma_param">
+                            <option value="1">1</option>
+                            <option value="0.1">0.1</option>
+                            <option value="0.01">0.01</option>
+                        </select>
+                    </div>
+                </div>
+            </div>  
+
+            <div id="random_forest_params" style="display: none;">
+                <p><strong>Random Forest Hyperparameters</strong></p>
+                <div class="input-group">
+                    <label for="max_depth_rf">Max Depth</label>
+                    <select id="max_depth_rf" name="max_depth_rf">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="decision_tree_params" style="display: none;">
+                <p><strong>Decision Tree Hyperparameters</strong></p>
+                <div class="input-group">
+                    <label for="max_depth_dt">Max Depth</label>
+                    <select id="max_depth_dt" name="max_depth_dt">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        
+            
+            <div class="input-group">
+                <input type="submit" value="Run Classifier">
+            </div>
+        </form>
+        <section id="results" style="display:none;">
+            <h2>Results</h2>
+            <p>The results after processing the selected model and feature selection method will be displayed here.</p>
+        </section>
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
+
+

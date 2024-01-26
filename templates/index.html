@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>SupplySight - Home</title>
+</head>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="../static/img/logo.png" alt="SupplySightLogo">
+            </div>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/sales-forecasting">SALES FORECASTING</a></li>
+                <li><a href="/delay-detection">DELAY DETECTION</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="main-heading">Supply Chain Central: Sales Analytics & EDA Hub</h2>
+    
+        <!-- Chart Container for Delivery Status Distribution -->
+
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Delivery Status Distribution</h3>
+                <p class="analysis-text" id="delivery-status-distribution" contenteditable="false">{{ analysis_texts['delivery-status-distribution'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('delivery-status-distribution')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/delivery_status_distribution.png') }}" alt="Delivery Status Distribution" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Customer Segment Distribution -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Customer Segment Distribution</h3>
+                <p class="analysis-text" id="customer-segment-distribution" contenteditable="false">{{ analysis_texts['customer-segment-distribution'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('customer-segment-distribution')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/customer_segment.png') }}" alt="Customer Segment Distribution" class="image-frame">
+        </div>
+
+
+        <!-- Chart Container for Top 20 Countries by Number of Orders -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Top 20 Countries by Number of Orders</h3>
+                <p class="analysis-text" id="top-countries-orders" contenteditable="false">{{ analysis_texts['top-countries-orders'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('top-countries-orders')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/top_countries_orders.png') }}" alt="Top 20 Countries by Number of Orders" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Top 10 Categories by Number of Orders -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Top 10 Categories by Number of Orders</h3>
+                <p class="analysis-text" id = "top-categories-orders" contenteditable="false">{{ analysis_texts['top-categories-orders'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('top-categories-orders')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/top_categories.png') }}" alt="Top 10 Categories by Number of Orders" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Top 10 Products by Sales -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Top 10 Products by Sales</h3>
+                <p class="analysis-text" id="top-products-sales" contenteditable="false">{{ analysis_texts['top-products-sales'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('top-products-sales')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/top_product_sales.png') }}" alt="Top 10 Products by Sales" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Sales by Order Region -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Sales by Order Region</h3>
+                <p class="analysis-text" id="sales-order-region" contenteditable="false">{{ analysis_texts['sales-order-region'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('sales-order-region')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/region_sales.png') }}" alt="Sales by Order Region" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Top 10 Categories by Avg Order Value -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Top 10 Categories by Avg Order Value</h3>
+                <p class="analysis-text" id = "top-categories-avg-order-value" contenteditable="false">{{ analysis_texts['top-categories-avg-order-value'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('top-categories-avg-order-value')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/top_avg_order_value.png') }}" alt="Top 10 Categories by Avg Order Value" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Yearly Sales Distribution -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Yearly Sales Distribution</h3>
+                <p class="analysis-text" id = "yearly-sales-distribution" contenteditable="false">{{ analysis_texts['yearly-sales-distribution'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('yearly-sales-distribution')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/yearly_sales.png') }}" alt="Yearly Sales Distribution" class="image-frame">
+        </div>
+
+        <!-- Chart Container for Monthly Sales Trend -->
+        <div class="chart-container">
+            <div class="chart-title">
+                <h3>Monthly Sales Trend</h3>
+                <p class="analysis-text" id= "monthly-sales-trend" contenteditable="false">{{ analysis_texts['monthly-sales-trend'] }}</p>
+                <span class="edit-icon" onclick="makeEditable('monthly-sales-trend')"><i class="fas fa-pencil-alt"></i></span>
+            </div>
+            <img src="{{ url_for('static', filename='img/monthly_sales_trend.png') }}" alt="Monthly Sales Trend" class="image-frame">
+        </div>
+    
+    <script src="../static/js/script.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>SupplySight - Sales Forecasting</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    
+</head>
+
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo-container">
+                <img src="../static/img/logo.png" alt="SupplySightLogo">
+            </div>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/sales-forecasting">SALES FORECASTING</a></li>
+                <li><a href="/delay-detection">DELAY DETECTION</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="introduction">
+            <h1>Sales Forecasting</h1>
+            <p>Forecast your sales effectively using advanced regression algorithms. Make a selection from the options below to test and compare different forecasting models:</p>
+        </section>
+
+
+        <form method="post" class="form" id="regressionForm">
+            
+            <div class="input-group regression-group">
+                <label for="regression_algorithm">Regression Algorithm</label>
+                <select name="regression_algorithm[]" id="regression_algorithm" multiple size="7">
+                    <option value="linear">Linear Regression</option>
+                    <option value="xgboost">XGBoost</option>
+                    <option value="adaboost">AdaBoost</option>
+                    <option value="random_forest">Random Forest</option>
+                    <option value="decision_tree">Decision Tree</option>
+                    <option value="lasso">Lasso</option>
+                    <option value="ridge">Ridge</option>
+                </select>
+                <p id="note">Note: If Lasso or Ridge is selected, the Feature and Transformation options will be disabled.</p>
+                <p id="note-all">Note: If All is selected, the model will run through different algorithms and return the one with best accuracy result.</p>
+            </div> 
+
+            <div class="input-group">
+                <label for="feature_selection_method">Feature Selection Method</label>
+                <select name="feature_selection_method" id="feature_selection_method">
+                    <option value="original">Original</option>
+                    <option value="variance">Variance</option>
+                    <option value="kbest">SelectKBest</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="transformation_method">Transformation Method</label>
+                <select name="transformation_method" id="transformation_method">
+                    <option value="none">None</option>
+                    <option value="poly">Poly 2 Interaction</option>
+                    <option value="pca">PCA</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <input type="submit" value="Run Regressor">
+            </div>
+        </form>
+
+        <section id="results" style="display:none;">
+            <h2>Results</h2>
+            <p>The results after processing the selected model and feature selection method will be displayed here.</p>
+        </section>
+
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
