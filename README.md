@@ -14,13 +14,13 @@ This project is a full-stack web application that enhances supply chain manageme
 - **Interactive Interface**: Developed with HTML, CSS, and JavaScript for effective user engagement.
 - **Structure and Navigation**: Segmented into multiple pages for streamlined user interaction.
   - **Index Page**: Displays dashboards and visualizations for Business Intelligence.
-    <p align="center"> <img src='static/img/index_page.png' width=800 class="center"></p>
+    <p align="center"> <img src='static/img/index_page.png' width=600 class="center"></p>
   - **Sales Forecasting**: Users can interact with machine learning models for sales predictions.
-    <p align="center"> <img src='static/img/sales_forecasting_page.png' width=800 class="center"></p>
+    <p align="center"> <img src='static/img/sales_forecasting_page.png' width=600 class="center"></p>
   - **Delay Detection**: Detects late deliveries to optimize logistic.
-    <p align="center"> <img src='static/img/delay_detection_page.png' width=800 class="center"></p>
+    <p align="center"> <img src='static/img/delay_detection_page.png' width=600 class="center"></p>
   - **Contact Page**: Provides information and a communication channel.
-    <p align="center"> <img src='static/img/contact_page.png' width=800 class="center"></p>
+    <p align="center"> <img src='static/img/contact_page.png' width=600 class="center"></p>
 
 ### Back End
 
@@ -32,20 +32,32 @@ This project is a full-stack web application that enhances supply chain manageme
 
 - **Data Processing**: Involves cleaning, dimensionality reduction, and feature creation.
 - **Feature Selection**: Uses methods like Variance Threshold and K-Best.
-- **Interactive Features**: Allows comparison of regression algorithms and feature selections.
-  - ![Interactive Features on Sales Forecasting](path/to/screenshot)
+- **Model Execution**: Allows comparison of regression algorithms and feature selections.
+ <p align="center"> <img src='static/img/result_of_multiple_algorithm_sales_forecasting.png' width=600 class="center"></p>
+ 
+ <p align="center"> <img src='static/img/descriptive_explanation_sales_forecasting.png' width=600 class="center"></p>
+
+  <p align="center"> <img src='static/img/scatterplot_sales_forecasting.png' width=600 class="center"></p>
 
 ## Delay Detection - Classification Approach
 
 - **Data Transformation**: Includes label encoding and feature selection.
 - **Model Execution**: Supports various classifiers with hyperparameter customization.
-  - ![Delay Detection Model Selection](path/to/screenshot)
+  
+ <p align="center"> <img src='static/img/result_of_multiple_algorithm_delay_detection.png' width=600 class="center"></p>
+ 
+ <p align="center"> <img src='static/img/cm_delay_detection.png' width=600 class="center"></p>
 
+ <p align="center"> <img src='static/img/cr_delay_detection.png' width=600 class="center"></p>
+  
 ## Dashboard - Supply Chain Performance Visualization
 
 - **Visualization Generation**: Utilizes Matplotlib and Seaborn for dynamic charts and graphs.
 - **Interactive Features**: Allows real-time editing and updating of analysis text.
-  - ![Supply Chain Dashboard](path/to/screenshot)
+
+ <p align="center"> <img src='static/img/scm_dashboard.png' width=600 class="center"></p>
+
+ <p align="center"> <img src='static/img/editable_texts.png' width=600 class="center"></p>
 
 ## Lessons Learned and Future Work
 
