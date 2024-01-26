@@ -1,11 +1,11 @@
 <p align="center">
-    <img src='Implementation/static/img/logo.png' width=200 class="center">
+    <img src='static/img/logo.png' width=200 class="center">
     <h2 align="center">Full-Stack Web Application for Supply Chain Management</h2>
 </p>
 
 ### Overview
 
-This project is a full-stack web application designed to enhance supply chain management using machine learning models. It integrates technologies like HTML, CSS, JavaScript, and Flask, providing an intuitive interface for user interaction and data-driven decision-making in supply chain operations.
+This project is a full-stack web application that enhances supply chain management through the use of machine learning models. It integrates Python and its machine learning libraries for backend processing, and employs Flask, along with HTML, CSS, and JavaScript for the frontend. This combination provides an intuitive interface for user interaction and facilitates data-driven decision-making in supply chain operations.
 
 ### Features
 
@@ -14,13 +14,13 @@ This project is a full-stack web application designed to enhance supply chain ma
 - **Interactive Interface**: Developed with HTML, CSS, and JavaScript for effective user engagement.
 - **Structure and Navigation**: Segmented into multiple pages for streamlined user interaction.
   - **Index Page**: Displays dashboards and visualizations for Business Intelligence.
-    <p align="center"> <img src='Implementation/static/img/index_page.png' width=200 class="center"></p>
+    <p align="center"> <img src='static/img/index_page.png' width=200 class="center"></p>
   - **Sales Forecasting**: Users can interact with machine learning models for sales predictions.
-    - ![Sales Forecasting Page](Implementation/static/img/sales_forecasting_page.png)
+    - ![Sales Forecasting Page](static/img/sales_forecasting_page.png)
   - **Delay Detection**: Detects late deliveries to optimize logistics.
-    - ![Delay Detection Page](Implementation/static/img/delay_detection_page.png)
+    - ![Delay Detection Page](static/img/delay_detection_page.png)
   - **Contact Page**: Provides information and a communication channel.
-    - ![Contact Page](Implementation/static/img/contact_page.png)
+    - ![Contact Page](static/img/contact_page.png)
 
 ### Back End
 
