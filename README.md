@@ -57,7 +57,7 @@ This project is a full-stack web application that enhances supply chain manageme
 
  <p align="center"> <img src='static/img/scm_dashboard.png' width=600 class="center"></p>
 
- <p align="center"> <img src='static/img/editable_texts.png' width=600 class="center"></p>
+ <p align="center"> <img src='static/img/editable_texts.png' width=400 class="center"></p>
 
 ## Lessons Learned and Future Work
 
