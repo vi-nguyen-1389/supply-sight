@@ -14,13 +14,13 @@ This project is a full-stack web application that enhances supply chain manageme
 - **Interactive Interface**: Developed with HTML, CSS, and JavaScript for effective user engagement.
 - **Structure and Navigation**: Segmented into multiple pages for streamlined user interaction.
   - **Index Page**: Displays dashboards and visualizations for Business Intelligence.
-    <p align="center"> <img src='static/img/index_page.png' width=200 class="center"></p>
+    <p align="center"> <img src='static/img/index_page.png' width=500 class="center"></p>
   - **Sales Forecasting**: Users can interact with machine learning models for sales predictions.
-    - ![Sales Forecasting Page](static/img/sales_forecasting_page.png)
-  - **Delay Detection**: Detects late deliveries to optimize logistics.
-    - ![Delay Detection Page](static/img/delay_detection_page.png)
+    <p align="center"> <img src='static/img/sales_forecasting_page.png' width=500 class="center"></p>
+  - **Delay Detection**: Detects late deliveries to optimize logistic.
+    <p align="center"> <img src='static/img/delay_detection_page.png' width=500 class="center"></p>
   - **Contact Page**: Provides information and a communication channel.
-    - ![Contact Page](static/img/contact_page.png)
+    <p align="center"> <img src='static/img/contact_page.png' width=500 class="center"></p>
 
 ### Back End
 
